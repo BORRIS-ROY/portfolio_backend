@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: portfolio-backend
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn portfolio_backend.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        value: "your-database-url"
+      - key: SECRET_KEY
+        value: "your-secret-key
