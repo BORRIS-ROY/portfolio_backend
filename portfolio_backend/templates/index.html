@@ -1,0 +1,222 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>bagati's_cv</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('http://127.0.0.1:8000/projects/api/projects/')  // API Endpoint
+            .then(response => response.json())
+            .then(data => {
+                let projectList = document.getElementById("project-list");
+                projectList.innerHTML = "";  // Clear loading message
+    
+                data.forEach(project => {
+                    let projectItem = document.createElement("div");
+                    projectItem.innerHTML = `
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <p><b>Technology:</b> ${project.technology}</p>
+                        <a href="${project.project_url}" target="_blank">View Project</a>
+                        <hr>
+                    `;
+                    projectList.appendChild(projectItem);
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching projects:", error);
+                document.getElementById("project-list").innerHTML = "<p>Failed to load projects.</p>";
+            });
+        });
+    </script>
+    
+    <body>
+        <div class="container">
+            <div class="slides slide1">
+                <img src="{%static 'images/pic2.jpg' %}" alt="pic2">
+                <div class="intro">
+                    <p>Hey There! I'm</p>
+                    <h1 class="head">PAJOBO ROY BAGATI</h1>
+                    <p class="pp">
+                        Welcome to my Curriculum Vitae. Thank you for picking interest in my profile! Let's talk 1's and 0's.
+                    </p>
+                </div>
+                <div class="slides2">
+                    <img src="{%static 'images/bag2.jpg' %}" alt="bag image">
+                    <h2>Pajobo Roy Bagati</h2>
+                    <p>MSc in Artificial Intelligence <br>
+                         BSc in Computer Science<br>
+                    Bexleyheath, London<br>
+                    07724689810
+                    </p><br>
+                    <a href="#">bagati@boris.com</a><br>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <p>SCROLL DOWN FOR MORE!</p>
+                </div>
+            </div>
+
+            <!--SLIDE 2 STARTS HERE-->
+            <div class="slides slide2">
+                <!--<h2>Background</h2>-->
+                <div class="para">
+                    <h2>Summary</h2>
+                    <p>Dedicated software tester and AI enthusiast with 6 months of hands-on experience in ensuring software quality 
+                        through rigorous testing methodologies. Equipped with a strong foundation in Computer Science (BSc) and a MSc in 
+                        Artificial Intelligence at Royal Holloway University of London. I have a passion for leveraging AI and machine learning 
+                        techniques to enhance software processes. Experienced in developing software projects from concept to 
+                        development and proficient in collaborating with cross-functional teams. Committed to continuous learning, 
+                        research, innovation, and delivering impactful, high-quality solutions..</p>
+                </div>
+                <div class="para">
+                    <h2><b>RELEVANT WORK EXPERIENCE</b></h2>
+                    <p></p>
+                    <dl>
+                        <dt>
+                            09/2022 - 03/2023<br />
+                            Trainee Software Tester (Internship), HI-TECH PLUS
+                        </dt>
+                        <dd>Perform tests on a feature/page of a software on a weekly basis.</dd>
+                        <dd>Create test steps and test data to be followed and used or the tests.</dd>
+                        <dd>Create test matrix to describe tests, expected and actual results, and test status.</dd>
+                        <dd>Create test matrix to describe tests, expected and actual results, and test status.</dd>
+                        <dd>Document test results with image attachments to evidence the results of every test.</dd>
+                    </dl>
+                </div>
+            </div>
+            <!--SLIDE 2 ENDS HERE-->
+
+            <!--SKILLS AND LANGUAGES SLIDE STARTS-->
+            <div class="slides slide4">
+                <h2>Skills and Knowledge</h2>
+            
+                <div class="skills">
+                    <ul>
+                        <li>Data Analysis</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Machine Learning</li>
+                        <li>Software Testing/QA Testing</li>
+                        <li>Automated Testing</li>
+                        <li>Web Development</li>
+                        <li>OOP Principles</li>
+                        <li>Business Intelligence Systems</li>
+                        <li>Debugging Techniques</li>
+                        <li>Git & Version Control</li>
+                        <li>Model Version Control</li>
+                        <li>Time Management</li>
+                        <li>Understanding of DevOps</li>
+                    </ul>
+                </div>
+            
+                <div class="languages">
+                    <ul>
+                        <li>Python <span class="bar"><span class="python"></span></span></li>
+                        <li>Java <span class="bar"><span class="java"></span></span></li>
+                        <li>C <span class="bar"><span class="c"></span></span></li>
+                        <li>C++ <span class="bar"><span class="c++"></span></span></li>
+                        <li>C# <span class="bar"><span class="c#"></span></span></li>
+                        <li>HTML <span class="bar"><span class="html"></span></span></li>
+                        <li>CSS <span class="bar"><span class="css"></span></span></li>
+                        <li>PHP <span class="bar"><span class="php"></span></span></li>
+                        <li>JavaScript <span class="bar"><span class="javascript"></span></span></li>
+                        <li>MATLAB <span class="bar"><span class="matlab"></span></span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--SKILLS AND LANGUAGES SLIDE ENDS-->
+
+
+            <!-- EDUCATION SLIDE STARTS -->
+            <div class="slides slide5">
+                <h2>Education Background</h2>
+                <div class="education">
+                    <div class="edu-container">
+                        <div class="edu-card">
+                            <h3>MSc Artificial Intelligence, Royal Holloway University</h3>
+                            <p class="edu-year">2023 - 2024</p>
+                            <p><strong>Individual Project:</strong> Satisfiability Modulo Theories and Bounded Model Theories</p>
+                            <p><strong>Relevant Modules:</strong> Data Analysis, Deep Learning, Autonomous Intelligent Systems, 
+                                AI Principles and Techniques, Ethics in Advanced Computing, Business Intelligence Systems, 
+                                Infrastructures and Technologies.</p>
+                        </div>
+
+                        <div class="edu-card">
+                            <h3>BSc Computer Science, Oxford Brookes University</h3>
+                            <p class="edu-year">2018 - 2022</p>
+                            <p><strong>Grade:</strong> Upper Second Class Honours - 2.1</p>
+                            <p><strong>Dissertation (Final Year Project):</strong> Predictive Modelling, Linear Classification, 
+                                and Visualisation of Malaria Data to aid tracking of the malaria disease.</p>
+                            <p><strong>Relevant Modules:</strong> Data Structures & Algorithms, Problem Solving, Machine Learning, 
+                                Advanced Object-Oriented Programming, Cloud Computing, IoT, Software Engineering, AI, Web Development.</p>
+                        </div>
+
+                        <div class="edu-card">
+                            <h3>Advanced Diploma in Software Engineering, Aptech</h3>
+                            <p class="edu-year">2016 - 2017</p>
+                            <p><strong>Relevant Modules:</strong> Introduction to C, Web-Application Development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EDUCATION SLIDE ENDS -->
+
+            <!--Portfolio SLide STARTS-->
+            <div class="slides slide6">
+                <h2>Portfolio/Personal Projects</h2>
+                <div id="project-list">
+                    {% for project in projects %}
+                    <div class="project-card">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        <p class="project-tech"><strong>Technology:</strong> {{ project.technology }}</p>
+                        <a href="{{ project.link }}" class="btn">View Project</a>
+                    </div>
+                    {% empty %}
+                    <p>No projects available at the moment.</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <!--PORTFOLIO SLIDE ENDS-->
+
+            <!--RESEARCH SLIDE STARTS-->
+            <div class="slides slide7">
+                <h2 class="section-title">Research Interests & Current Research Projects</h2>
+                <div class="research-container">
+                     <!-- Research Interests -->
+                    <div class="research-column">
+                        <h3>Research Interests</h3>
+                        <ul>
+                            <li><strong>Artificial Intelligence & Machine Learning:</strong> Exploring AI models for automation, predictive analytics, and intelligent decision-making.</li>
+                            <li><strong>Natural Language Processing (NLP):</strong> Investigating techniques for speech recognition, text generation, and sentiment analysis.</li>
+                            <li><strong>Computer Vision:</strong> Developing image recognition systems, object detection models, and deep learning-based visual analytics.</li>
+                            <li><strong>Cybersecurity & Ethical Hacking:</strong> Studying security vulnerabilities, encryption techniques, and ethical hacking methodologies.</li>
+                            <li><strong>Human-Computer Interaction (HCI):</strong> Enhancing user experience through intuitive UI/UX design and interactive system development.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Current Research Projects -->
+                    <div class="research-column">
+                        <h3>Current Research Projects</h3>
+                        <ul>
+                            <li><strong>AI-Powered Movie Recommendation System:</strong> A personalized recommendation engine based on user preferences using collaborative filtering.</li>
+                            <li><strong>Chatbot for Healthcare Assistance:</strong> Developing an AI chatbot to assist users with basic medical inquiries and recommendations.</li>
+                            <li><strong>Real-Time Object Detection for Autonomous Vehicles:</strong> Implementing deep learning-based object recognition for self-driving cars.</li>
+                            <li><strong>Cyber Threat Detection Using Machine Learning:</strong> A predictive model to identify security threats and prevent cyberattacks in real-time.</li>
+                            <li><strong>Hand Gesture Recognition for Smart Devices:</strong> A computer vision project enabling interaction with devices through hand gestures.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--RESEARCH SLIDE ENDS-->
+
+            <!--HOBBIES AND INTERESTS SLIDE STARTS-->
+            <div class="slides slide8">
+                <h2>Hobbies and Interests</h2>
+            </div>
+        </div>
+    </body>
+</html>
