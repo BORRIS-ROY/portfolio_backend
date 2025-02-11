@@ -10,12 +10,12 @@
     </head>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            fetch('http://127.0.0.1:8000/projects/api/projects/')  // API Endpoint
+            fetch('https://portfolio-backend-ibrm.onrender.com/projects/api/projects/')  // ✅ Use the correct deployed API URL
             .then(response => response.json())
             .then(data => {
                 let projectList = document.getElementById("project-list");
                 projectList.innerHTML = "";  // Clear loading message
-    
+        
                 data.forEach(project => {
                     let projectItem = document.createElement("div");
                     projectItem.innerHTML = `

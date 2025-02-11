@@ -63,6 +63,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://yourfrontend.com",  # ✅ If frontend is hosted separately
 ]
 
+# ✅ If using localhost for development
+CORS_ALLOW_ALL_ORIGINS = True  # Set to False in production!
+
 ROOT_URLCONF = 'portfolio_backend.urls'
 
 TEMPLATES = [
