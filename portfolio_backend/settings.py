@@ -58,13 +58,36 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# ✅ Allow API requests from your frontend
 CORS_ALLOWED_ORIGINS = [
-    "https://portfolio-backend-ibrm.onrender.com",  # ✅ API domain
-    "https://yourfrontend.com",  # ✅ If frontend is hosted separately
+    "https://portfolio-backend-ibrm.onrender.com",  # ✅ Render backend
+    "http://127.0.0.1:5500",  # ✅ Local frontend (if testing locally)
+    "https://yourfrontenddomain.com",  # ✅ Your actual frontend
 ]
 
-# ✅ If using localhost for development
-CORS_ALLOW_ALL_ORIGINS = True  # Set to False in production!
+# ✅ Allow all origins temporarily (Only for debugging, REMOVE in production)
+CORS_ALLOW_ALL_ORIGINS = True  # Uncomment if needed
+
+# ✅ Ensure your API accepts all HTTP methods
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE",
+    "OPTIONS"
+]
+
+# ✅ Ensure your API accepts headers from frontend
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+    "x-requested-with"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://portfolio-backend-ibrm.onrender.com",
+    "https://yourfrontenddomain.com"
+]
 
 ROOT_URLCONF = 'portfolio_backend.urls'
 
