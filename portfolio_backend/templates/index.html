@@ -10,11 +10,11 @@
     </head>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            fetch('https://portfolio-backend-ibrm.onrender.com/projects/api/projects/')  // ✅ Use the correct deployed API URL
+            fetch('https://portfolio-backend-ibrm.onrender.com/api/projects/')  // ✅ Use the live backend URL
             .then(response => response.json())
             .then(data => {
                 let projectList = document.getElementById("project-list");
-                projectList.innerHTML = "";  // Clear loading message
+                projectList.innerHTML = "";  
         
                 data.forEach(project => {
                     let projectItem = document.createElement("div");
