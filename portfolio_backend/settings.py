@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['portfolio-backend-ibrm.onrender.com', '127.0.0.1', 'localhost'
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,9 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'projects',
+    
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',  # <-- Add this line
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -53,6 +56,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://portfolio-backend-ibrm.onrender.com",  # ✅ API domain
+    "https://yourfrontend.com",  # ✅ If frontend is hosted separately
 ]
 
 ROOT_URLCONF = 'portfolio_backend.urls'
