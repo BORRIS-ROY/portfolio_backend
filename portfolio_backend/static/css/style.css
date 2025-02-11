@@ -267,8 +267,8 @@
     background: rgba(255, 255, 255, 0.15);
     padding: 10px;  /* ✅ Reduce padding to make cards smaller */
     border-radius: 10px;
-    width: 100%;
-    max-width: 850px;
+    width: 90%;
+    max-width: 90%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     text-align: left;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
