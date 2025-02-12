@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-k_#@&-^k4d1(84x_4cbn(i7iir*b0f&rr@wu3td)dpo@-s5pwx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['portfolio-backend-ibrm.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['boris-roy.com','www.boris-roy.com''portfolio-backend-ibrm.onrender.com', '127.0.0.1', 'localhost']
 
 
 
