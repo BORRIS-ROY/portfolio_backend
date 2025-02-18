@@ -36,7 +36,7 @@
 }
 
 .slides h2{
-    margin-top: 1%;
+    /*margin-top: 1%;*/
     max-height: 5%;
     width: 100%;
     text-align: center;
@@ -77,7 +77,7 @@
 .para {
     flex: 1;  /* ✅ Makes both sections take equal width */
     background: rgba(255, 255, 255, 0.15);
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     text-align: left;
@@ -97,6 +97,7 @@
     line-height: 1.4;
 }
 
+
 /* Responsive Fix: Stack on smaller screens */
 @media (max-width: 768px) {
     .slide2 {
@@ -107,6 +108,50 @@
     .para {
         width: 90%;
     }
+
+/* Style company name */
+.company {
+    font-weight: bold;
+    color: #ffd700; /* ✅ Golden highlight for company */
+}
+
+/* Style tasks */
+.work-tasks {
+    padding-left: 20px;
+}
+
+.work-tasks li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+/* Key Achievement Styling */
+.key-achievement {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-left: 4px solid #ffd700; /* ✅ Golden bar for highlight */
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.key-achievement h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffd700; /* ✅ Match the golden theme */
+}
+
+.key-achievement p {
+    font-size: 14px;
+    color: white;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .para {
+        width: 100%;
+    }
+}
 }
 
 /*SLIDE2 ENDS*/
@@ -123,8 +168,8 @@
 /*SLIDE4 BEGINS*/
 .skills, .languages {
     width: 45%;
-    top: 10%;
-    padding: 20px;
+    top: 5%;
+    padding: 10px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -145,14 +190,14 @@
 }
 
 .skills li {
-    padding: 10px;
-    font-size: 18px;
+    padding: 5px;
+    font-size: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Progress Bars */
 .languages li {
-    font-size: 18px;
+    font-size: 10px;
     margin-bottom: 10px;
     color: white;
 }
@@ -173,15 +218,15 @@
 }
 
 /* Individual Progress Bar Colors */
-.python { width: 90%; background: #ff9800; }
-.java { width: 85%; background: #f44336; }
-.c { width: 75%; background: #2196f3; }
-.c++ { width: 80%; background: #673ab7; }
-.c# { width: 70%; background: #8e44ad; }
-.html { width: 95%; background: #e44d26; }
-.css { width: 90%; background: #2965f1; }
-.php { width: 65%; background: #6c5ce7; }
-.javascript { width: 85%; background: #f1c40f; }
+.python { width: 70%; background: #ff9800; }
+.java { width: 40%; background: #f44336; }
+.c { width: 10%; background: #2196f3; }
+.c++ { width: 20%; background: #673ab7; }
+.c# { width: 10%; background: #8e44ad; }
+.html { width: 70%; background: #e44d26; }
+.css { width: 70%; background: #2965f1; }
+.php { width: 50%; background: #6c5ce7; }
+.javascript { width: 50%; background: #f1c40f; }
 .matlab { width: 60%; background: #d35400; }
 
 /* Ensuring proper spacing */
@@ -247,7 +292,7 @@
 /* Education Section Container */
 .education{
     position:absolute;
-    top: 12%;
+    top: 15%;
     width: 90%;
     /*height: 88%;*/
 }
@@ -419,7 +464,7 @@
     gap: 30px;
     max-width: 90%;
     margin: 0 auto; /* Centers the entire section */
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 /* Adjust column styling */
