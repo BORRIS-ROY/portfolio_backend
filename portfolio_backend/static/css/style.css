@@ -27,142 +27,40 @@
     overflow-y: auto;
 }
 
-/*SLIDE 1 STARTS*/
-/* Main Slide Container */
-.slide1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.slide1 img{
+    width: 50%;
+    height: 50%;
+    margin-top: 5%;
+    margin-left: 10%;
+
+}
+
+.slides h2{
+    /*margin-top: 1%;*/
+    max-height: 5%;
+    width: 100%;
     text-align: center;
-    padding: 40px;
-    background: linear-gradient(to bottom, #333, #555); /* Gradient background */
-    color: white;
 }
 
-/* Profile Image */
-.slide1 img {
-    max-width: 200px;
-    height: auto;
+.slides2{
+    width: 30%;
+    text-align: center;
+}
+
+.slides2 img{
+    height: 35%;
+    width: 40%;
     border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    margin-top: 20%;
 }
 
-/* Intro Text */
-.intro {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Slight transparent background */
-    border-radius: 10px;
+.intro{
+    position: absolute;
+    top: 60%;
+    width: 20%;
+    left: 10%;
 }
-
-.intro p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-/* Name Heading */
-.head {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffcc00; /* Highlighted name */
-}
-
-/* About & Contact Section */
-.slides2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
-    margin-top: 30px;
-}
-
-.slides2 img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ffcc00;
-    margin-bottom: 15px;
-}
-
-/* Contact Info */
-.slides2 p {
-    font-size: 1rem;
-    color: #ddd;
-    margin: 5px 0;
-}
-
-/* Email & Social Links */
-.slides2 a {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.slides2 a:hover {
-    text-decoration: underline;
-}
-
-/* SCROLL DOWN TEXT */
-.slides2 p:last-child {
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-top: 15px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .slide1 {
-        padding: 20px;
-    }
-
-    .intro {
-        max-width: 90%;
-    }
-
-    .head {
-        font-size: 2rem;
-    }
-
-    .slides2 {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .slide1 img {
-        width: 150px;
-    }
-
-    .head {
-        font-size: 1.8rem;
-    }
-
-    .intro p {
-        font-size: 1rem;
-    }
-
-    .slides2 img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .slides2 p {
-        font-size: 0.9rem;
-    }
-}
-/*Side 1 Ends!!!*/
-
+/*Side1 Ends!!!*/
 
 /*SLIDE2 STARTS*/
 .slide2 {
