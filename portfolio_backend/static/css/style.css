@@ -27,6 +27,13 @@
     overflow-y: auto;
 }
 
+.slides h2{
+    /*margin-top: 1%;*/
+    max-height: 5%;
+    width: 100%;
+    text-align: center;
+}
+
 .slide1 img{
     width: 50%;
     height: 50%;
@@ -35,12 +42,7 @@
 
 }
 
-.slides h2{
-    /*margin-top: 1%;*/
-    max-height: 5%;
-    width: 100%;
-    text-align: center;
-}
+
 
 .slides2{
     width: 30%;
