@@ -58,6 +58,15 @@
                     <a href="#" class="fa fa-linkedin"></a>
                     <p>SCROLL DOWN FOR MORE!</p>
                 </div>
+
+                <!-- Embedded PDF of CV/Portfolio -->
+                <div class="cv-container">
+                    <h2>My CV / Portfolio</h2>
+                    <iframe src="{% static 'pdfs/my_cv.pdf' %}" width="100%" height="600px"></iframe>
+                    <p>
+                        <a href="{% static 'pdfs/my_cv.pdf' %}" target="_blank">View Full CV / Download</a>
+                    </p>
+                </div>
             </div>
 
             <!--SLIDE 2 STARTS HERE-->
@@ -117,6 +126,7 @@
                         <li>Software Testing/QA Testing</li>
                         <li>Automated Testing</li>
                         <li>Web Development</li>
+                        <li>Django</li>
                         <li>OOP Principles</li>
                         <li>Business Intelligence Systems</li>
                         <li>Debugging Techniques</li>
@@ -233,6 +243,37 @@
             <!--HOBBIES AND INTERESTS SLIDE STARTS-->
             <div class="slides slide8">
                 <h2>Hobbies and Interests</h2>
+                <div class="hobbies-container">
+                    <div class="hobby">
+                        <img src="r&r.jpg" alt="Reading and Research">
+                        <h3>Reading & Research</h3>
+                        <p>Exploring new technologies, AI, and staying updated with the latest trends.</p>
+                    </div>
+            
+                    <div class="hobby">
+                        <img src="fitness.jfif" alt="Fitness">
+                        <h3>Fitness</h3>
+                        <p>Maintaining a healthy lifestyle with regular workouts and mindfulness.</p>
+                    </div>
+            
+                    <div class="hobby">
+                        <img src="archery-hunter.jpg" alt="Archery">
+                        <h3>Archery</h3>
+                        <p>Practicing precision and focus through archery sessions.</p>
+                    </div>
+            
+                    <div class="hobby">
+                        <img src="golf.jfif" alt="Golf">
+                        <h3>Golf</h3>
+                        <p>Enjoying the outdoors while refining accuracy and technique in golf.</p>
+                    </div>
+            
+                    <div class="hobby">
+                        <img src="sport.jpg" alt="Sports">
+                        <h3>Sports</h3>
+                        <p>Engaging in various sports like basketball, football, and tennis.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
