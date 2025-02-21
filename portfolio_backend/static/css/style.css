@@ -600,3 +600,66 @@ ul {
 }
 
 /*SLIDE 7 ENDS*/
+/* Style for Hobbies Section */
+.slide8 {
+    text-align: center;
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 50px 20px;
+}
+
+/* Hobbies Container */
+.hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Hobby Cards */
+.hobby {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hobby:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hobby Images */
+.hobby img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Hobby Titles */
+.hobby h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Hobby Descriptions */
+.hobby p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hobbies-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby {
+        width: 80%;
+    }
+}
