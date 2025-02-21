@@ -37,8 +37,9 @@
     
     <body>
         <div class="container">
+            <div class="background-image"></div> <!-- Background Image Container -->
             <div class="slides slide1">
-                <img src="{%static 'images/pic2.jpg' %}" alt="pic2">
+                <!--<img src="{%static 'images/pic2.jpg' %}" alt="pic2">-->
                 <div class="intro">
                     <p>Hey There! I'm</p>
                     <h1 class="head">PAJOBO ROY BAGATI</h1>
@@ -48,13 +49,13 @@
                 </div>
                 <div class="slides2">
                     <img src="{%static 'images/bag2.jpg' %}" alt="bag image">
-                    <h2>Pajobo Roy Bagati</h2>
+                    <h2>Pajobo Roy Bagati</h2><br>
                     <p>MSc in Artificial Intelligence <br>
                          BSc in Computer Science<br>
                     Bexleyheath, London<br>
                     07724689810
                     </p><br>
-                    <a href="#">bagati@boris.com</a><br>
+                    <a href="#">borrispj5@hotmail.com</a><br>
                     <a href="#" class="fa fa-linkedin"></a>
                     <p>SCROLL DOWN FOR MORE!</p>
                 </div>
@@ -62,9 +63,9 @@
                 <!-- Embedded PDF of CV/Portfolio -->
                 <div class="cv-container">
                     <h2>My CV / Portfolio</h2>
-                    <iframe src="{% static 'pdfs/my_cv.pdf' %}" width="100%" height="600px"></iframe>
+                    <iframe src="{% static 'pdfs/Bagati-CV.pdf' %}" width="100%" height="600px"></iframe>
                     <p>
-                        <a href="{% static 'pdfs/my_cv.pdf' %}" target="_blank">View Full CV / Download</a>
+                        <a href="{% static 'pdfs/Bagati-CV.pdf' %}" target="_blank">View Full CV / Download</a>
                     </p>
                 </div>
             </div>
@@ -249,6 +250,12 @@
                         <h3>Reading & Research</h3>
                         <p>Exploring new technologies, AI, and staying updated with the latest trends.</p>
                     </div>
+
+                    <div class="hobby">
+                        <img src="{%static 'images/government.jfif' %}" alt="Government and Systems">
+                        <h3>Government & Systems</h3>
+                        <p>Studying political structures, policies, and governance.</p>
+                    </div>
             
                     <div class="hobby">
                         <img src="{%static 'images/fitness.jfif' %}" alt="Fitness">
@@ -272,6 +279,12 @@
                         <img src="{%static 'images/sport.jpg' %}" alt="Sports">
                         <h3>Sports</h3>
                         <p>Engaging in various sports like basketball, football, and tennis.</p>
+                    </div>
+
+                    <div class="hobby">
+                        <img src="{%static 'images/bbq.jfif' %}" alt="Roasting">
+                        <h3>BBQ & Roasting</h3>
+                        <p>Enjoying slow-cooked meats and grilling delicious meals.</p>
                     </div>
                 </div>
             </div>
