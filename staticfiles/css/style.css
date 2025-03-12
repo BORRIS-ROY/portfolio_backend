@@ -110,11 +110,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch; /* Ensures equal height */
+    align-items: flex-start;
     width: 90%;
-    max-width: 1100px;
+    height: 50%;
     gap: 20px;
-    min-height: 300px; /* Ensures it doesn't shrink too much */
 }
 
 /* Profile Card */
