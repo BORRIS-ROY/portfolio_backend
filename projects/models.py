@@ -6,6 +6,7 @@ class Project(models.Model):
     description = models.TextField()          # Project description
     technology = models.CharField(max_length=100)  # Technology used
     project_url = models.URLField(blank=True, null=True)  # Optional: Link to the project
+    script_path = models.CharField(max_length=255, blank=True, null=True) 
 
     def __str__(self):
         return self.title

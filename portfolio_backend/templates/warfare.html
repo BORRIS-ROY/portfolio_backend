@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artificial Intelligence in war and The History of War Technology</title>
+  <meta name="description" content="Curated links on Artificial Intelligence in war and the history of war technology." />
+  <meta property="og:title" content="Artificial Intelligence in war and The History of War Technology" />
+  <meta property="og:description" content="Curated links to reports, PDFs, and pages about AI in warfare and the evolution of war technology." />
+  <meta name="theme-color" content="#0b1020" />
+  <style>
+    :root{
+      --bg: #0b1020;           /* deep navy */
+      --bg-elev: #121935;      /* slightly lighter for cards/nav */
+      --text: #ecf0ff;
+      --muted: #b6c0ef;
+      --accent: #7aa2ff;       /* link/accent */
+      --accent-2: #66e0c2;     /* subtle gradient blend */
+      --pdf: #ff6b6b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background: radial-gradient(1200px 600px at 20% -10%, rgba(122,162,255,.18), transparent 60%), 
+                        radial-gradient(900px 500px at 80% -20%, rgba(102,224,194,.12), transparent 60%), 
+                        var(--bg);
+      color:var(--text); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+
+    /* Skip link for accessibility */
+    .skip{
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip:focus{
+      left: 16px; top: 16px; width:auto; height:auto; padding:8px 12px; z-index:9999;
+      background:#000; color:#fff; border-radius:8px; outline:2px solid #fff;
+    }
+
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(18,25,53,.9), rgba(18,25,53,.75));
+      box-shadow: var(--shadow);
+    }
+    .nav{
+      display:flex; align-items:center; gap:20px; padding:14px clamp(16px, 4vw, 28px);
+      max-width:1200px; margin:0 auto;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text);
+      font-weight:700; letter-spacing:.2px;
+    }
+    .brand-mark{
+      width:28px; height:28px; border-radius:8px;
+      background: conic-gradient(from 210deg, var(--accent), var(--accent-2), var(--accent));
+      box-shadow: 0 6px 16px rgba(122,162,255,.45);
+    }
+    .title{
+      margin: 24px auto 8px; padding: 0 clamp(16px, 4vw, 28px); max-width:1200px;
+      font-size: clamp(22px, 2.8vw, 36px); line-height:1.15; font-weight:900;
+      background: linear-gradient(90deg, #fff, #cfe0ff 45%, #c7ffee); -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .subtitle{
+      margin: 0 auto 24px; padding: 0 clamp(16px, 4vw, 28px); max-width:1200px; color:var(--muted);
+      font-size: clamp(14px, 1.3vw, 18px);
+    }
+
+    /* Top linkbar */
+    nav{
+      display:flex; gap:10px; flex-wrap:wrap; margin-left:auto;
+    }
+    .link{
+      --pad-x: 12px;
+      display:inline-flex; align-items:center; gap:10px; text-decoration:none;
+      padding: 10px var(--pad-x); border-radius:999px;
+      background: rgba(255,255,255,.04);
+      color: var(--text); border:1px solid rgba(255,255,255,.08);
+      transition: transform .12s ease, background .2s ease, border-color .2s ease;
+      white-space:nowrap;
+    }
+    .link:hover, .link:focus-visible{
+      transform: translateY(-1px);
+      background: rgba(122,162,255,.12);
+      border-color: rgba(122,162,255,.35);
+      outline:none;
+    }
+    .badge{
+      font-size:.72rem; font-weight:700; padding:2px 8px; border-radius:6px; letter-spacing:.3px;
+      background: rgba(255,255,255,.1); color: var(--muted); border:1px solid rgba(255,255,255,.12);
+    }
+    .badge.pdf{ background: rgba(255,107,107,.12); color:#ffdede; border-color: rgba(255,107,107,.35)}
+    .dot{width:8px;height:8px;border-radius:50%; background: currentColor; opacity:.9}
+
+    /* Content grid of links */
+    .wrap{max-width:1200px; margin: 10px auto 70px; padding: 0 clamp(16px, 4vw, 28px);}
+    .grid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .card{
+      grid-column: span 12;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 18px; display:flex; align-items:flex-start; gap:14px; text-decoration:none; color:var(--text);
+      transition: transform .12s ease, border-color .2s ease, background .2s ease;
+      box-shadow: var(--shadow);
+    }
+    .card:hover, .card:focus-visible{
+      transform: translateY(-2px);
+      border-color: rgba(122,162,255,.35);
+      outline:none;
+    }
+    .icon{
+      width:28px; height:28px; flex: 0 0 auto; border-radius:8px; display:grid; place-items:center;
+      background: rgba(122,162,255,.15);
+    }
+    .icon.pdf{ background: rgba(255,107,107,.15)}
+    .card h3{
+      margin:0 0 6px; font-size:1rem; letter-spacing:.2px;
+    }
+    .meta{
+      display:flex; gap:10px; align-items:center; color: var(--muted); font-size:.85rem;
+    }
+    .spacer{flex:1}
+    .cta{
+      font-size:.9rem; font-weight:700; color:var(--accent); text-decoration:none;
+    }
+
+    /* Responsive columns */
+    @media (min-width: 640px){
+      .card{ grid-column: span 6; }
+    }
+    @media (min-width: 980px){
+      .card{ grid-column: span 4; }
+    }
+
+    /* Mobile menu button */
+    .menu-btn{
+      display:none;
+      margin-left:auto; background: transparent; color: var(--text); border:1px solid rgba(255,255,255,.18);
+      padding:10px 12px; border-radius:10px;
+    }
+    .menu-btn:focus-visible{ outline:2px solid var(--accent);}
+    @media (max-width: 880px){
+      nav{ display:none; width:100%; flex-direction:column; margin:10px 0 0 0}
+      .menu-btn{ display:inline-flex; }
+      .nav{ align-items:flex-start; }
+      .nav.open nav{ display:flex; }
+    }
+
+    /* Focus visibility for keyboard users */
+    :focus-visible{ outline: 2px solid var(--accent-2); outline-offset: 2px; border-radius: 10px; }
+
+    /* Respect user's preferred color scheme if set to light (keeps style harmonious) */
+    @media (prefers-color-scheme: light){
+      :root{ --bg: #f7f8ff; --bg-elev:#ffffff; --text:#0d1533; --muted:#47507a; --accent:#2b59ff; --accent-2:#0bbf8a; --shadow: 0 10px 30px rgba(0,0,0,.08); }
+      .card{ background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.01)); border-color: rgba(0,0,0,.08);}
+      header{ background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.75)); }
+      .link{ background: rgba(0,0,0,.03); border-color: rgba(0,0,0,.08); }
+      .badge{ background: rgba(0,0,0,.04); color:#3e4a78; border-color: rgba(0,0,0,.08); }
+      .badge.pdf{ background: rgba(255,107,107,.12); color: #8b1b1b; border-color: rgba(255,107,107,.25); }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to main content</a>
+
+  <header>
+    <div class="nav" id="nav">
+      <a class="brand" href="#" aria-label="Homepage">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>AI in War • History of War Tech</span>
+      </a>
+
+      <!-- Mobile menu toggle -->
+      <button class="menu-btn" aria-expanded="false" aria-controls="top-links" id="menuBtn">
+        ☰ Menu
+      </button>
+
+      <!-- Top links to other pages/PDFs -->
+      <nav id="top-links" aria-label="Top links">
+        <!-- Replace href values with your real URLs -->
+        <a class="link" href="ai-battlefield-overview.html">
+          <span class="dot" style="color:var(--accent)"></span> AI Battlefield Overview
+        </a>
+        <a class="link" href="autonomous-weapons-policy.pdf" target="_blank" rel="noopener">
+          Autonomous Weapons Policy <span class="badge pdf" aria-label="PDF">PDF</span>
+        </a>
+        <a class="link" href="drone-swarms-and-ewarfare.html">
+          Drone Swarms &amp; EW
+        </a>
+        <a class="link" href="lawfare-ai-targeting.pdf" target="_blank" rel="noopener">
+          AI Targeting &amp; Lawfare <span class="badge pdf">PDF</span>
+        </a>
+        <a class="link" href="history-timeline.html">
+          History Timeline
+        </a>
+        <a class="link" href="cold-war-tech-declassified.pdf" target="_blank" rel="noopener">
+          Cold War Tech (Declassified) <span class="badge pdf">PDF</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="title">Artificial Intelligence in war and The History of War Technology</h1>
+  <p class="subtitle">A curated starting point. Use the top bar for quick access, or jump into the collections below.</p>
+
+  <main id="content" class="wrap">
+    <section class="grid" aria-label="Featured links">
+      <!-- CARD 1 -->
+      <a class="card" href="foundations-of-ai-c2.pdf" target="_blank" rel="noopener">
+        <span class="icon pdf" aria-hidden="true">
+          <!-- simple PDF icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M13 2v5h5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M7 14h3.5c1 0 1.5.6 1.5 1.4 0 .8-.5 1.6-1.5 1.6H7V14zm0-4h4c1.2 0 2 .8 2 2s-.8 2-2 2H7v-4zm8 0h2v6h-2v-6z" fill="currentColor"/>
+          </svg>
+        </span>
+        <div>
+          <h3>Foundations of AI for Command &amp; Control</h3>
+          <div class="meta">
+            <span>PDF</span> · <span>Primer</span>
+          </div>
+        </div>
+        <span class="spacer"></span>
+        <span class="cta">Open</span>
+      </a>
+
+      <!-- CARD 2 -->
+      <a class="card" href="ai-enabled-ISR.html">
+        <span class="icon" aria-hidden="true">
+          <!-- page icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 3h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M7 7h10M7 11h10M7 15h10" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </span>
+        <div>
+          <h3>AI-Enabled ISR (Intelligence, Surveillance, Reconnaissance)</h3>
+          <div class="meta">
+            <span>Web page</span> · <span>Technical Overview</span>
+          </div>
+        </div>
+        <span class="spacer"></span>
+        <span class="cta">Read</span>
+      </a>
+
+      <!-- CARD 3 -->
+      <a class="card" href="ethics-autonomy-rules-of-engagement.pdf" target="_blank" rel="noopener">
+        <span class="icon pdf" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M13 2v5h5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M7 14h3.5c1 0 1.5.6 1.5 1.4 0 .8-.5 1.6-1.5 1.6H7V14zm0-4h4c1.2 0 2 .8 2 2s-.8 2-2 2H7v-4zm8 0h2v6h-2v-6z" fill="currentColor"/>
+          </svg>
+        </span>
+        <div>
+          <h3>Ethics of Autonomy &amp; Rules of Engagement</h3>
+          <div class="meta">
+            <span>PDF</span> · <span>Policy &amp; Legal</span>
+          </div>
+        </div>
+        <span class="spacer"></span>
+        <span class="cta">Open</span>
+      </a>
+
+      <!-- CARD 4 -->
+      <a class="card" href="timeline-history-of-war-technology.html">
+        <span class="icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 7v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <div>
+          <h3>Interactive Timeline: The History of War Technology</h3>
+          <div class="meta">
+            <span>Web page</span> · <span>From Bronze to Digital</span>
+          </div>
+        </div>
+        <span class="spacer"></span>
+        <span class="cta">Explore</span>
+      </a>
+
+      <!-- CARD 5 -->
+      <a class="card" href="combined-arms-and-algorithms.pdf" target="_blank" rel="noopener">
+        <span class="icon pdf" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M13 2v5h5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M7 14h3.5c1 0 1.5.6 1.5 1.4 0 .8-.5 1.6-1.5 1.6H7V14zm0-4h4c1.2 0 2 .8 2 2s-.8 2-2 2H7v-4zm8 0h2v6h-2v-6z" fill="currentColor"/>
+          </svg>
+        </span>
+        <div>
+          <h3>Combined Arms &amp; Algorithms: Integration in Modern Warfare</h3>
+          <div class="meta">
+            <span>PDF</span> · <span>Operational Concepts</span>
+          </div>
+        </div>
+        <span class="spacer"></span>
+        <span class="cta">Open</span>
+      </a>
+
+      <!-- CARD 6 -->
+      <a class="card" href="naval-history-radar-sonar.html">
+        <span class="icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 17c2.5-3 6-5 8-5s5.5 2 8 5" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </span>
+        <div>
+          <h3>From RADAR to SONAR: Naval Tech Through the Ages</h3>
+          <div class="meta">
+            <span>Web page</span> · <span>History &amp; Systems</span>
+          </div>
+        </div>
+        <span class="spacer"></span>
+        <span class="cta">Read</span>
+      </a>
+
+    </section>
+  </main>
+
+  <footer class="wrap" style="opacity:.8; font-size:.9rem; padding-bottom:40px">
+    <hr style="border:0; height:1px; background: linear-gradient(90deg, rgba(255,255,255,.06), rgba(255,255,255,.18), rgba(255,255,255,.06)); margin: 10px 0 20px;">
+    <p>
+      Tip: PDFs open in a new tab. Replace any <code>href</code> with your own page or PDF URL.
+      The top bar keeps your most important links one click away.
+    </p>
+  </footer>
+
+  <script>
+    // Small, accessible mobile menu toggle
+    (function(){
+      const btn = document.getElementById('menuBtn');
+      const navWrap = document.getElementById('nav');
+      btn?.addEventListener('click', () => {
+        const open = navWrap.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    }());
+  </script>
+</body>
+</html>
