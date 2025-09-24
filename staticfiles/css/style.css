@@ -1,3 +1,6 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { overflow-x: hidden; }
+
 *{
     margin: 0;
     padding: 0;
@@ -106,35 +109,46 @@
 }
 
 /* Flexbox for Profile and CV */
-.info-container {
-    display: flex;                 /* <-- this is the missing piece */
-    gap: 20px;
-    justify-content: space-between;
-    align-items: stretch;
-    height: auto;
-    min-height: 42vh;
-    width: 90%;
-    margin: 0 auto;
+/* 2) Info row: make it a real row, keep it inside the viewport */
+.info-container{
+  display: flex;              /* side-by-side */
+  gap: 20px;
+  align-items: stretch;
+  justify-content: space-between;
+
+  /* keep it inside the slide width */
+  width: min(1100px, 92%);
+  margin: 0 auto;
+
+  /* let height grow with content (no internal scrolling) */
+  height: auto;
+  min-height: 42vh;
 }
 
-/* Profile Card */
-/* Slides 2 & CV Container */
+/* 3) Left column: allow it to shrink if space gets tight */
 .slides2{
-    flex: 0 0 32%;          /* ~one-third column */
-    max-width: 420px;
-    height: auto;
+  /* basis ~32%, but allow shrinking to avoid overflow */
+  flex: 0 1 32%;
+  max-width: 420px;
+  height: auto;
 }
 
+/* 4) Right column: wider, no internal scrollbars */
 .cv-container{
-  flex: 1 1 68%;          /* take the remaining space */
+  flex: 1 1 0;                /* take remaining space, shrink if needed */
   max-width: none;
   text-align: left;
-  align-items: flex-start; /* use the container top-left */
+
+  display: flex;              /* for internal layout */
+  flex-direction: column;
+  align-items: flex-start;
+
   padding: 16px 18px;
-  font-size: 0.95rem;
+  font-size: clamp(.95rem, .85rem + .3vw, 1rem);
   line-height: 1.5;
+
   height: auto;
-  overflow: auto;          /* keep long text scrollable if needed */
+  overflow: visible;          /* <-- remove the internal scrollbar */
 }
 
 /* Profile Image */
