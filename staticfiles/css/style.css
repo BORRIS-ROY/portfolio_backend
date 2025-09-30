@@ -129,7 +129,7 @@ body { overflow-x: hidden; }
 .slides2{
   /* basis ~32%, but allow shrinking to avoid overflow */
   flex: 0 1 32%;
-  max-width: 420px;
+  max-width: 320px;
   height: auto;
 }
 
