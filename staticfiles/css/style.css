@@ -89,7 +89,7 @@ body { overflow-x: hidden; }
     -webkit-backdrop-filter: blur(10px);
     width: 90%;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-    margin-top: auto; /* Adjust dynamically */
+    margin-top: 2%; /* Adjust dynamically */
     margin-bottom: 10px;
  
 }
@@ -112,7 +112,7 @@ body { overflow-x: hidden; }
 /* 2) Info row: make it a real row, keep it inside the viewport */
 .info-container{
   display: flex;              /* side-by-side */
-  gap: 20px;
+  gap: 10px;
   align-items: stretch;
   justify-content: space-between;
 
